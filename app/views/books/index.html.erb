@@ -43,7 +43,6 @@
     <!-- HTML based on tutorials by Kevin Skoglund on LinkedInLearning "Ruby on Rails 6 Essential Training"-->
     <!-- Table template from Faiz Ahmed https://codepen.io/faaezahmd/pen/dJeRex-->
     <div class="container">
-    <%= link_to("Go Back", books_path, :class=>'back-link')%>
     <h2>TalkBuddy</h2>
     <%= link_to("Add a phrase.", new_book_path, :class=> 'action new btn btn-lg btn-success')%>
     <br>
@@ -91,7 +90,7 @@
         
             <li class="table-header">
             <div class="col col-1">Phrase</div>
-            <div class="col col-2">Label</div>
+            <div class="col col-2">Description</div>
             <div class="col col-3">Actions</div>
             </li>
             <% @books.each do |book| %>
