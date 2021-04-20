@@ -8382,3 +8382,16 @@ Processing by BooksController#index as HTML
 Completed 200 OK in 22ms (Views: 19.9ms | ActiveRecord: 1.0ms | Allocations: 4764)
 
 
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (6.0ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Yes"], ["author", "Confirmation"], ["genre", "Green"], ["created_at", "2021-04-20 19:54:18.805240"], ["updated_at", "2021-04-20 19:54:18.805240"]]
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.4ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "No"], ["author", "Decline"], ["genre", "Red"], ["created_at", "2021-04-20 19:54:18.819165"], ["updated_at", "2021-04-20 19:54:18.819165"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.4ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "What?"], ["author", "Question"], ["genre", "Blue"], ["created_at", "2021-04-20 19:54:18.823117"], ["updated_at", "2021-04-20 19:54:18.823117"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.4ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "I need help"], ["author", "Help"], ["genre", "Yellow"], ["created_at", "2021-04-20 19:54:18.827041"], ["updated_at", "2021-04-20 19:54:18.827041"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
