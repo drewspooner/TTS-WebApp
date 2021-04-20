@@ -1,0 +1,20 @@
+<div class="delete">
+    <%= link_to("Go Back", books_path, :class=>'back-link')%>
+
+    <h1>Delete Book</h1>
+    <!-- HTML based on tutorials by Kevin Skoglund on LinkedInLearning "Ruby on Rails 6 Essential Training"-->
+    
+
+    <%= form_for(@book, :method => 'delete') do |f| %>
+
+    <p>Confirm deletion of <%= @book.title%></p>
+    
+
+    <div class="form-buttons">
+      <%= f.submit("Confirm") %>
+    </div>
+    <% end %>
+    <div class="form-buttons">
+      <%= link_to("CANCEL DELETION", books_path, :class=>'back-link')%>
+    </div>
+</div>

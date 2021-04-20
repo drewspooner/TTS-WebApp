@@ -1,0 +1,37 @@
+<div class="new">
+    <%= link_to("Go Back", books_path, :class=>'back-link')%>
+
+    <h1>Add a new book.</h1>
+    <!-- HTML based on tutorials by Kevin Skoglund on LinkedInLearning "Ruby on Rails 6 Essential Training"-->
+    
+    <%= form_for(@book, :url => books_path, :method => 'post') do |f| %>
+
+    <table summary="Book form fields">
+      <tr>
+        <th><%= f.label :title, 'Title'%></th>
+        <td><%= f.text_field(:title) %></td>
+      </tr>
+      <tr>
+        <th><%= f.label :author, 'Author'%></th>
+        <td><%= f.text_field(:author) %></td>
+      </tr>
+       <tr>
+        <th><%= f.label :price, 'Price'%></th>
+        <td><%= f.text_field(:price) %></td>
+      </tr>
+      <tr>
+        <th><%= f.label :genre, 'Genre'%></th>
+        <td><%= f.select :genre, options_for_select([["Fiction"],["Science Fiction"],["Non-Fiction"],["Biography"],["Horror"],["Mystery"],["Romance"]]) %></td>
+      </tr>
+      <tr>
+        <th><%= f.label :published, 'Published'%></th>
+        <td><%= f.date_select :published, :order => [:year, :month, :day], :start_year => 150.years.ago.year.to_i, end_year: Time.now.year.to_i, :use_two_digit_numbers => true %></td>
+      </tr>
+     
+    </table>
+
+    <div class="form-buttons">
+      <%= f.submit("Create book") %>
+    </div>
+    <% end %>
+</div>

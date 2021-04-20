@@ -1,0 +1,45 @@
+
+<div class="show">
+<!-- HTML based on tutorials by Kevin Skoglund on LinkedInLearning "Ruby on Rails 6 Essential Training"-->
+
+    <%= link_to("Go Back", books_path, :class=>'back-link')%>
+    <h1>Books</h1>
+    <br>
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <td><%= @book.id %></td> 
+        </tr>
+        <tr>
+            <th>Title</th>
+            <td><%= @book.title %></td> 
+        </tr>
+        <tr>
+            <th>Author</th>
+            <td><%= @book.author %></td> 
+        </tr>
+        <tr>
+            <th>Genre</th>
+            <td><%= @book.genre %></td> 
+        </tr>
+        <tr>
+            <th>Price</th>
+            <td><%= @book.price %></td> 
+        </tr>
+        <tr>
+            <th>Published</th>
+            <td><%= @book.published %></td> 
+        </tr>
+        <tr>
+            <th>Entry Created</th>
+            <td><%= @book.created_at %></td> 
+        </tr>
+        <tr>
+            <th>Last Edit</th>
+            <td><%= @book.updated_at %></td> 
+        </tr>
+    </table>
+
+</div>
+
