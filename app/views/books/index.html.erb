@@ -54,7 +54,12 @@
                     function pageLoad(e){
                         var btn2BAdded = document.createElement("input");
                         btn2BAdded.type = "button";
-                        btn2BAdded.className += 'btn btn-primary btn-lg';
+                        btn2BAdded.className += 'btn btn-lg';
+                        btn2BAdded.className += "<%= book.genre == "Blue" ? ' btn-primary' : ''%>";
+                        btn2BAdded.className += "<%= book.genre == "Green" ? ' btn-success' : ''%>";
+                        btn2BAdded.className += "<%= book.genre == "Yellow" ? ' btn-warning' : ''%>";
+                        btn2BAdded.className += "<%= book.genre == "Red" ? ' btn-danger' : ''%>";
+
                         var textTyped = "<%= book.title %>";
                         btn2BAdded.value = textTyped;
                         btn2BAdded.id = "btn_rv";
